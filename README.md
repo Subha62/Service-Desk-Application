@@ -47,8 +47,36 @@ Below are some screenshots showcasing the application’s key screens and featur
 
 ---
 
+
+
 ## ⚙️ Installation
 
 1️⃣ **Clone the repository**
 ```bash
 git clone https://github.com/Subha62/Service-Desk-Application.git
+
+## 2️⃣ Navigate to project :
+cd Service-Desk-Application
+## 3️⃣ Install dependencies :
+ # Backend:
+  cd backend
+  npm install
+# Frontend:
+  cd ../frontend
+npm install
+## 4️⃣ Run the application :
+Backend:
+npm run server
+Frontend:
+npm start
+## 📄 Tech Stack
+Frontend: React, HTML5, CSS3, JavaScript
+
+Backend: Node.js, Express
+
+Database: MongoDB
+
+Authentication: JWT
+
+Other: RESTful API, Responsive Layout
+
