@@ -52,7 +52,7 @@ Below are some screenshots showcasing the application’s key screens and featur
 ## ⚙️ Installation
 
 1️⃣ **Clone the repository**
-```bash
+
 git clone https://github.com/Subha62/Service-Desk-Application.git
 
 ## 2️⃣ Navigate to project :
@@ -69,6 +69,8 @@ Backend:
 npm run server
 Frontend:
 npm start
+
+
 ## 📄 Tech Stack
 Frontend: React, HTML5, CSS3, JavaScript
 
