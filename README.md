@@ -67,6 +67,7 @@ npm install
 ## 4️⃣ Run the application :
 Backend:
 npm run server
+
 Frontend:
 npm start
 
