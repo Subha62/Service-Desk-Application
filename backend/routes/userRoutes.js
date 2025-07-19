@@ -21,6 +21,6 @@ router.post('/login', authUser);
 // @desc    Get user by ID (admin only)
 router.get('/:id', protect, isAdmin, getUserById);
 
-// ✅ Export the router
+
 export default router;
 
