@@ -10,7 +10,7 @@ const initialState = {
   message: '',
 };
 
-// ✅ Create new ticket
+//  Create new ticket
 export const createTicket = createAsyncThunk(
   'tickets/create',
   async (ticketData, thunkAPI) => {
@@ -27,7 +27,7 @@ export const createTicket = createAsyncThunk(
   }
 );
 
-// ✅ Get all user tickets
+//  Get all user tickets
 export const getTickets = createAsyncThunk(
   'tickets/getAll',
   async (_, thunkAPI) => {
@@ -44,7 +44,7 @@ export const getTickets = createAsyncThunk(
   }
 );
 
-// ✅ Get single ticket
+//  Get single ticket
 export const getTicket = createAsyncThunk(
   'tickets/get',
   async (ticketId, thunkAPI) => {
@@ -61,7 +61,7 @@ export const getTicket = createAsyncThunk(
   }
 );
 
-// ✅ Close ticket
+//  Close ticket
 export const closeTicket = createAsyncThunk(
   'tickets/close',
   async (ticketId, thunkAPI) => {
