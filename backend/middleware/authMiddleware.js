@@ -15,7 +15,7 @@ const protect = asyncHandler(async (req, res, next) => {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       req.user = await User.findById(decoded.id).select('-password');
 
-      //  THIS is the correct place:
+      
       console.log("Decoded user:", req.user);
 
       next();
@@ -34,7 +34,7 @@ const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
   } else {
-    res.status(403); // 403 Forbidden
+    res.status(403); 
     throw new Error('Not authorized as admin');
   }
 };
