@@ -9,14 +9,14 @@ const ticketSchema = new mongoose.Schema(
       required: true,
     },
 
-    // Ticket category (e.g., IT, HR, Facilities)
+    // Ticket category 
     category: {
       type: String,
       required: true,
       trim: true,
     },
 
-    // The actual product or asset related to the ticket (e.g., Laptop, Printer)
+    // The actual product or asset related to the ticket 
     product: {
       type: String,
       required: true,
