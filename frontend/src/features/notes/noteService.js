@@ -41,7 +41,7 @@ import axios from "axios";
 
 const API_URL = "/api/tickets";
 
-// ✅ Get all notes for a ticket
+//  Get all notes for a ticket
 const getNotes = async (ticketId, token) => {
   const config = {
     headers: {
@@ -50,10 +50,10 @@ const getNotes = async (ticketId, token) => {
   };
   const response = await axios.get(`${API_URL}/${ticketId}/notes`, config);
 
-  return response.data; // 👈 backend should send back array of notes
+  return response.data; 
 };
 
-// ✅ Create a new note for a ticket
+//  Create a new note for a ticket
 const createNote = async (noteText, ticketId, token) => {
   const config = {
     headers: {
@@ -66,10 +66,10 @@ const createNote = async (noteText, ticketId, token) => {
     config
   );
 
-  return response.data; // 👈 backend should send back created note object
+  return response.data; 
 };
 
-// ✅ Export as noteService object
+
 const noteService = {
   getNotes,
   createNote,
