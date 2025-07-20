@@ -49,47 +49,7 @@
 
 
 
-// export const noteSlice = createSlice({
-//     name: "note",
-//     initialState,
-//     reducers: {
-//         reset: (state, action) => initialState
-//     },
-//     extraReducers: (builder) => {
-//         builder
-//             .addCase(getNotes.pending, (state, action) => {
-//                 state.isLoading = true
-//             })
-//             .addCase(getNotes.fulfilled, (state, action) => {
-//                 state.isLoading = false
-//                 state.isSuccess = true
-//                 state.notes = action.payload
-//             })
-//             .addCase(getNotes.rejected, (state, action) => {
-//                 state.isError = true
-//                 state.message = action.payload
-//                 state.isLoading = false
-//             })
-//             .addCase(createNote.pending, (state, action) => {
-//                 state.isLoading = true
-//             })
-//             .addCase(createNote.fulfilled, (state, action) => {
-//                 state.isLoading = false
-//                 state.isSuccess = true
-//                 state.notes.push(action.payload)
-//             })
-//             .addCase(createNote.rejected, (state, action) => {
-//                 state.isError = true
-//                 state.message = action.payload
-//                 state.isLoading = false
-//             })
 
-//     }
-// })
-
-// export const {reset} = noteSlice.actions;
-
-// export default noteSlice.reducer;
 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import noteService from "./noteService";
@@ -102,7 +62,7 @@ const initialState = {
   message: "",
 };
 
-// ✅ Get ticket notes
+//  Get ticket notes
 export const getNotes = createAsyncThunk(
   "notes/getAll",
   async (ticketId, thunkAPI) => {
@@ -119,7 +79,7 @@ export const getNotes = createAsyncThunk(
   }
 );
 
-// ✅ Create ticket note
+//  Create ticket note
 export const createNote = createAsyncThunk(
   "notes/create",
   async ({ noteText, ticketId }, thunkAPI) => {
@@ -144,7 +104,7 @@ export const noteSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // ✅ Get notes
+      //  Get notes
       .addCase(getNotes.pending, (state) => {
         state.isLoading = true;
       })
@@ -159,7 +119,7 @@ export const noteSlice = createSlice({
         state.message = action.payload;
       })
 
-      // ✅ Create note
+      //  Create note
       .addCase(createNote.pending, (state) => {
         state.isLoading = true;
       })
